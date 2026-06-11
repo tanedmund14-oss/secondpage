@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<title>期末實作2-41318422_陳一文</title>
+<meta charset="utf-8">
+<script>
+function replaceImg(){
+    var oldImg = document.getElementsByTagName("img")[0];
+    
+    var newImg = document.createElement("img");
+    newImg.setAttribute("src","img/2.jpg");
+    newImg.setAttribute("width","300");
+    newImg.setAttribute("height","200");
+    
+    oldImg.parentElement.removeChild(oldImg);
+    
+    document.body.appendChild(newImg);
+}
+</script>
+</head>
+<body>
+<img src="img/1.jpg" width="300" height="200">
+<div>
+    <input type="submit" value="換圖" onclick="replaceImg()">    
+</div>
+</body>
+</html>
