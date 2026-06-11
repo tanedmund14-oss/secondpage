@@ -12,9 +12,7 @@ function replaceImg(){
     newImg.setAttribute("width","300");
     newImg.setAttribute("height","200");
     
-    oldImg.parentElement.removeChild(oldImg);
-    
-    document.body.appendChild(newImg);
+    oldImg.parentNode.replaceChild(newImg, oldImg);
 }
 </script>
 </head>
