@@ -4,15 +4,18 @@
 <title>期末實作2-41318422_陳一文</title>
 <meta charset="utf-8">
 <script>
+<script>
 function replaceImg(){
-    var oldImg = document.getElementsByTagName("img")[0];
-    
-    var newImg = document.createElement("img");
-    newImg.setAttribute("src","img/2.jpg");
-    newImg.setAttribute("width","300");
-    newImg.setAttribute("height","200");
-    
-    oldImg.parentNode.replaceChild(newImg, oldImg);
+    var imgOld = document.getElementsByTagName("img")[0];
+    imgOld.parentElement.removeChild(imgOld);
+
+    var imgNew = document.createElement("img");
+    imgNew.setAttribute("src","img/2.jpg");
+    imgNew.setAttribute("width","300");
+    imgNew.setAttribute("height","200");
+
+    var div = document.getElementsByTagName("div")[0];
+    document.body.insertBefore(imgNew, div);
 }
 </script>
 </head>
